@@ -278,7 +278,7 @@ export default function Home() {
                         {/* Center Section - Color Swatches */}
                         <div className="flex-1 flex justify-center">
                             <div className="bg-gray-700/50 rounded-lg p-2">
-                                <Group spacing="xs" className="flex justify-center">
+                                <Group className="flex justify-center">
                                     {SWATCHES.map((swatch) => (
                                         <div
                                             key={swatch}
@@ -324,7 +324,7 @@ export default function Home() {
                 <Draggable
                     key={index}
                     defaultPosition={latexPosition}
-                    onStop={(e, data) => setLatexPosition({ x: data.x, y: data.y })}
+                    onStop={(_e, data) => setLatexPosition({ x: data.x, y: data.y })}
                 >
                     <div className="absolute p-3 bg-gray-800/90 backdrop-blur-sm text-white rounded-lg shadow-lg">
                         <div className="latex-content text-lg">{latex}</div>
